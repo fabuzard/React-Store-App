@@ -1,15 +1,22 @@
 import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+
+import Home from "./pages/Home";
+
+
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
-    <div className="bg-slate-500 h-screen">
-      <Navbar />
+    <div>
+
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
