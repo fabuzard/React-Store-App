@@ -3,13 +3,15 @@ import axios from 'axios'
 import Products from '../components/Products'
 
 function Home() {
-    const [data, setData] = useState([])
+    const [products,setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/products').then((response) => setData(response.data)).catch((error) => console.error("Error fetchng data ", error))
+        axios.get('https://fakestoreapi.com/products').then((response) => setProducts(response.data)).catch((error) => console.error("Error fetchng data ", error))
     }, [])
 
-    console.log(data)
+
+
+ 
     return (
         <div className='bg-background-gray px-20 py-4'>
             <section id='top-text ' className='mb-20'>
@@ -18,10 +20,11 @@ function Home() {
                 <p className='max-w-96'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </section>
             <section id='products '>
-                <ul className='grid grid-cols-3 gap-y-6'>
-                    {data.map(product => (
+                <ul className='grid grid-cols-1 lg:grid-cols-3 gap-y-6'>
+                    {products.map(product => (
                         <li key={product.id}>
-                            <Products title={product.title} price={product.price} image={product.image} />
+                          
+                            <Products title={product.title} price={product.price} image={product.image} productId = {product.id}/>
 
                         </li>
                     ))}
