@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { selectTotalPrice } from '../components/cartSelector';
 
 function CartPage() {
+  const totalPrice = useSelector(selectTotalPrice)
   const cartItems = useSelector((state) => state.cart.items);
 
   if (cartItems.length === 0) {
@@ -28,7 +30,7 @@ function CartPage() {
           ))}
         </div>
       <div>
-        <p>Total: {}</p>
+        <p>Total: ${totalPrice.toFixed(2)}</p>
 <button>Pay</button>
 
       </div>

@@ -6,12 +6,15 @@ function Navbar() {
   const items = useSelector((state)=>state.cart.items.length)
   return (
     <div className='px-20 py-2  flex justify-between align-middle'>
-      <h1 className='font-inter font-bold text-xl'>Website</h1>
+      <h1 className='font-inter font-bold text-xl cursor-default'>Website</h1>
+      <Link to={`/`}>
+      <p className='font-bold text-xl'>Home</p>
+      </Link>
       <div className='flex my-auto space-x-1'>
 
         <p>{items}</p>
         <Link to={`/checkout`}> 
-        <img src={vector} alt="" srcset="" />
+        <img src={vector} alt="" />
         </Link>
       </div>
 
