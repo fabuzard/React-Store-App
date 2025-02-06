@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../components/cartSlice";
-import LoadingSpinner from "../components/loadingSpinner";
+import LoadingSpinner from "../components/LoadingSpinner";
 import { Link } from "react-router-dom";
 
 function ProductPage() {
