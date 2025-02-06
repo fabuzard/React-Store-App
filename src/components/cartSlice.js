@@ -19,7 +19,15 @@ const cartSlice = createSlice({
             
         },
         removeCart:(state,action)=>{
-            state.items=state.items.filter(item=>item.id!==action.payload.id)
+            const product =action.payload;
+            const existingProduct = state.items.find(item=>item.id==product.id);
+            
+            if(existingProduct.quantity>1){
+                existingProduct.quantity-=1;
+            }else{
+                state.items=state.items.filter(item=>item.id!==action.payload.id)
+                
+            }
         },
         clearCart:(state)=>{
             state.items=[];
