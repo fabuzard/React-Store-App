@@ -1,8 +1,30 @@
-# React + Vite
+# E-Commerce Store 🛒
+![ecommerce2](https://github.com/user-attachments/assets/7eb6620b-0925-4b02-ae20-182c098d362b)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An e-commerce web application built with React, Redux, and Vite, featuring a product listing page, a detailed product page, and a shopping cart.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+[Click here to view the live demo](https://fabuzard-ecommerce.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
+- Browse and view products
+- Add products to the cart
+- View cart items and proceed to checkout
+- Responsive design for mobile and desktop
+
+## 🛠️ Technologies Used
+- **Frontend:** React, Redux, Tailwind CSS, React Router
+- **State Management:** Redux Toolkit
+- **API:** FakeStore API
+- **Build Tool:** Vite
+
+
+## 🚀 Deployment
+This project is deployed using **Netlify**. Any push to the GitHub repository will trigger an automatic deployment.
+
+## 🐛 Issues & Contributions
+If you find any bugs or want to improve the project, feel free to fork the repository and submit a pull request!
+
+---
+Made by Fabuzard
+
